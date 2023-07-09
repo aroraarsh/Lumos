@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -36,3 +40,142 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes glowing {
+  0% {
+    color: white;
+    text-shadow: 0 0 2px white;
+  }
+  50% {
+    color: white;
+    text-shadow: 0 0 10px white, 0 0 15px white, 0 0 20px white;
+  }
+  100% {
+    color: white;
+    text-shadow: 0 0 2px white;
+  }
+}
+
+
+.glow {
+  animation: glowing 2s infinite;
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(500px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-animation {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate-bounceInUp {
+  animation-name: bounceInUp;
+}
+
+.animate-fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes animateBar1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes animateBar2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  70% {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes animateBar3 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes animateBar4 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes animateBar5 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(-300px);
+  }
+}
+
+.animate-bar-1 {
+  animation-name: animateBar1;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-bar-2 {
+  animation-name: animateBar2;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-bar-3 {
+  animation-name: animateBar3;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-bar-4 {
+  animation-name: animateBar4;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-bar-5 {
+  animation-name: animateBar5;
+  animation-duration: 2.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+
